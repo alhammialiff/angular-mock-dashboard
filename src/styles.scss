@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 $primary-bg-color: #eeeee4;
-$secondary-bg-color: #abdbe3;
+$secondary-bg-color: #1f3e43;
 
 body {
     padding: 0;
@@ -16,14 +16,17 @@ body {
     height: 100%;
 }
 
+
 mat-sidenav {
     background-color: $secondary-bg-color;
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
     width: 200px;
+    color: white;
 }
 
+// Height needs to be 100vh instead of 100%
 mat-sidenav-container,
 mat-sidenav-content,
 mat-sidenav {

@@ -4,14 +4,14 @@
     mode="side"
     opened>
     <mat-nav-list>
-      <a mat-list-item>Test 1</a>
+      <a mat-list-item routerLink="/home">Home</a>
       <a mat-list-item>Test 2</a>
       <a mat-list-item>Test 3</a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    Main Content
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
