@@ -16,6 +16,16 @@ body {
     height: 100%;
 }
 
+.content-area {
+    margin: 10px;
+    padding: auto;
+}
+
+.summary-card{
+    margin: 10px;
+    width: 10vw;
+    height: 10vh;
+}
 
 mat-sidenav {
     background-color: $secondary-bg-color;
