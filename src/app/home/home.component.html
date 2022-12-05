@@ -15,10 +15,20 @@
   fxLayoutAlign="center center">
 
   <mat-card *ngIf="spending" class="summary-card">
-    <mat-card-content>{{spending[0].thisMonth}}</mat-card-content>
+    <mat-card-content>
+      <h4>Spending</h4>
+      <p>This Month: {{spending[0].thisMonth}}</p>
+      <p>Prev Month: {{spending[0].prevMonth}}</p>
+    
+    </mat-card-content>
   </mat-card>
-  <mat-card class="summary-card">
-    <mat-card-content>Card</mat-card-content>
+  <mat-card *ngIf="utilities" class="summary-card">
+    <mat-card-content>
+      <h4>Utilities</h4>
+      <p>Electric: {{utilities[0].electricityUsage}} kWh</p>
+      <p>Gas: {{utilities[0].gasUsage}} kWh</p>
+      <p>Water: {{utilities[0].waterUsage}} m3</p>
+    </mat-card-content>
   </mat-card>
   <mat-card class="summary-card">
     <mat-card-content>Card</mat-card-content>

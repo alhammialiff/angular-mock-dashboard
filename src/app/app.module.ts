@@ -20,6 +20,7 @@ import { SpendingService } from './services/spending.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
+import { UtilitiesService } from './services/utilities.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { baseURL } from './shared/baseurl';
   ],
   providers: [
     SpendingService,
+    UtilitiesService,
     { provide: 'BaseURL', useValue: baseURL }
   ],
   bootstrap: [AppComponent]
