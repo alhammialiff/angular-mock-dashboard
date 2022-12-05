@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Spending } from '../shared/spending';
+import { SpendingService } from '../services/spending.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  spending: Spending[];
+
+  constructor(private spendingService: SpendingService,
+    @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
+    this.spendingService.getSpending()
+      .subscribe((spending)=> this.spending = spending);
   }
 
 }

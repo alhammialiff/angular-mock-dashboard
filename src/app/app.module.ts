@@ -15,6 +15,12 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { HomeComponent } from './home/home.component';
 
+import { SpendingService } from './services/spending.service';
+
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +37,14 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatButtonModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SpendingService,
+    { provide: 'BaseURL', useValue: baseURL }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

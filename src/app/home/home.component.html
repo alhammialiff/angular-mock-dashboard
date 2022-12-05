@@ -14,8 +14,8 @@
   fxLayout.xs="column"
   fxLayoutAlign="center center">
 
-  <mat-card class="summary-card">
-    <mat-card-content>Card</mat-card-content>
+  <mat-card *ngIf="spending" class="summary-card">
+    <mat-card-content>{{spending[0].thisMonth}}</mat-card-content>
   </mat-card>
   <mat-card class="summary-card">
     <mat-card-content>Card</mat-card-content>
