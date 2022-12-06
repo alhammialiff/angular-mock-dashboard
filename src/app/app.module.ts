@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { HomeComponent } from './home/home.component';
+import { SpendingChartComponent } from './spending-chart/spending-chart.component';
 
 import { SpendingService } from './services/spending.service';
 
@@ -27,7 +28,8 @@ import { UtilitiesService } from './services/utilities.service';
     AppComponent,
     SidenavComponent,
     TopnavComponent,
-    HomeComponent
+    HomeComponent,
+    SpendingChartComponent
   ],
   imports: [
     BrowserModule,
