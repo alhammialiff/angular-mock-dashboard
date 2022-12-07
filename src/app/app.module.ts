@@ -22,6 +22,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
 import { UtilitiesService } from './services/utilities.service';
+import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UtilitiesService } from './services/utilities.service';
     SidenavComponent,
     TopnavComponent,
     HomeComponent,
-    SpendingChartComponent
+    SpendingChartComponent,
+    UtilitiesChartComponent
   ],
   imports: [
     BrowserModule,
