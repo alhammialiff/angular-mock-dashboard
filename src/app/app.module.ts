@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
 import { UtilitiesService } from './services/utilities.service';
 import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.component';
+import { MatTabsModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.compo
     MatListModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTabsModule,
     AppRoutingModule,
     MatCardModule,
     HttpModule,
