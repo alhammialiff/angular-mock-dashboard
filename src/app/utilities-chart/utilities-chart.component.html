@@ -1,5 +1,18 @@
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
-  <mat-tab label="First"><figure id="electricity-usage-graph"></figure></mat-tab>
-  <mat-tab label="Second"><figure id="gas-usage-graph"></figure></mat-tab>
-  <mat-tab label="Third"><figure id="water-usage-graph"></figure></mat-tab>
+<mat-tab-group animationDuration="0ms" (selectedTabChange)="toggleGraph($event)">
+  <mat-tab  label="First">
+    <div #electricGraph id="electricity-usage-graph">
+    </div>
+    <div #electricGraph id="electricity-usage-graph" (click)="toggleGraph(electricGraph)">
+    </div>
+  </mat-tab>
+  <mat-tab #gasGraph label="Second">
+    <div id="gas-usage-graph">
+    </div>
+  </mat-tab>
+  <mat-tab #waterGraph label="Third">
+    <div>
+      <figure id="water-usage-graph">
+      </figure>
+    </div>
+  </mat-tab>
 </mat-tab-group>
