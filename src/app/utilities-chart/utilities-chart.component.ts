@@ -225,7 +225,7 @@ export class UtilitiesChartComponent implements OnInit {
       .attr("stroke-width", 1.5)
       .attr("d", d3.line()
         .x(function (d) { return x(d.date) })
-        .y(function (d) { return y(d.waterUsage) });
+        .y(function (d) { return y(d.waterUsage) }));
 
     this.waterSVG.selectAll("waterUsageDataPoint")
       .data(data)

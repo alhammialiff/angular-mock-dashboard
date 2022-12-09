@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, } from '@angular/core';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -24,6 +24,17 @@ import { baseURL } from './shared/baseurl';
 import { UtilitiesService } from './services/utilities.service';
 import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.component';
 import { MatTabsModule } from '@angular/material/tabs';
+
+import { RippleGlobalOptions } from '@angular/material';
+import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
+
+const globalRippleConfig: RippleGlobalOptions = {
+  disabled: true,
+  animation: {
+    enterDuration: 300,
+    exitDuration: 0
+  }
+};
 
 @NgModule({
   declarations: [
@@ -51,7 +62,8 @@ import { MatTabsModule } from '@angular/material/tabs';
   providers: [
     SpendingService,
     UtilitiesService,
-    { provide: 'BaseURL', useValue: baseURL }
+    { provide: 'BaseURL', useValue: baseURL },
+    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig }
   ],
   bootstrap: [AppComponent]
 })

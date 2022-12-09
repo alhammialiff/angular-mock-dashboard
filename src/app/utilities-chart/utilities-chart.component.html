@@ -1,15 +1,15 @@
-<mat-tab-group animationDuration="0ms" (selectedTabChange)="toggleGraph($event)">
-  <mat-tab  label="First">
+<mat-tab-group animationDuration="0ms" 
+  mat-stretch-tabs="true" 
+  (selectedTabChange)="toggleGraph($event)">
+  <mat-tab  label="Electricity">
     <div #electricGraph id="electricity-usage-graph">
     </div>
-    <div #electricGraph id="electricity-usage-graph" (click)="toggleGraph(electricGraph)">
-    </div>
   </mat-tab>
-  <mat-tab #gasGraph label="Second">
+  <mat-tab #gasGraph label="Gas">
     <div id="gas-usage-graph">
     </div>
   </mat-tab>
-  <mat-tab #waterGraph label="Third">
+  <mat-tab #waterGraph label="Water">
     <div>
       <figure id="water-usage-graph">
       </figure>
