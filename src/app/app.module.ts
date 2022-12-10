@@ -9,21 +9,23 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { HomeComponent } from './home/home.component';
 import { SpendingChartComponent } from './spending-chart/spending-chart.component';
+import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.component';
 
 import { SpendingService } from './services/spending.service';
+import { UtilitiesService } from './services/utilities.service';
+import { SidenavToggleService } from './services/sidenav-toggle.service';
 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
-import { UtilitiesService } from './services/utilities.service';
-import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.component';
-import { MatTabsModule } from '@angular/material/tabs';
 
 import { RippleGlobalOptions } from '@angular/material';
 import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
@@ -57,10 +59,12 @@ const globalRippleConfig: RippleGlobalOptions = {
     AppRoutingModule,
     MatCardModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [
     SpendingService,
+    SidenavToggleService,
     UtilitiesService,
     { provide: 'BaseURL', useValue: baseURL },
     { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig }

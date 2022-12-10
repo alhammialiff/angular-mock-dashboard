@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
+import { SidenavToggleService } from '../services/sidenav-toggle.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  opened: boolean;
+  constructor(private sidenavToggleService: SidenavToggleService) { }
+
+  // Create access of #sidenav element for this file 
+  @ViewChild('sidenav') public sideNav: MatSidenav;
 
   ngOnInit() {
+    // Set Sidenav in Sidebar Toggle Service script to be #sidenav
+    this.sidenavToggleService.setSidenav(this.sideNav);
   }
 
 }

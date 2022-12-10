@@ -5,6 +5,7 @@ import { Utilities } from '../shared/utilities';
 
 import { SpendingService } from '../services/spending.service';
 import { UtilitiesService } from '../services/utilities.service';
+import { SidenavToggleService } from '../services/sidenav-toggle.service';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private spendingService: SpendingService,
     private utilitiesService: UtilitiesService,
+    private sidenavToggleService: SidenavToggleService,
     @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
@@ -27,6 +29,11 @@ export class HomeComponent implements OnInit {
 
     this.utilitiesService.getUtilities()
       .subscribe((utilities)=> this.utilities = utilities);
+    
+  }
+
+  toggleSidenav(){
+    this.sidenavToggleService.toggleSidenav();
   }
 
 }

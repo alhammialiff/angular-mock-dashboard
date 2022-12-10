@@ -12,7 +12,8 @@ import { createViewChild } from '@angular/compiler/src/core';
 export class UtilitiesChartComponent implements OnInit {
 
   utilities: Utilities[];
-  selectedGraph: any;
+  showGraph: boolean;
+
 
   public electricitySVG;
   public gasSVG;
