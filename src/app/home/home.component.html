@@ -1,5 +1,6 @@
 <button mat-mini-fab color="primary" 
-  aria-label="Example icon button with a menu icon"
+  *ngIf="!deviceXs"
+  aria-label="Menu burger button for non-XS screen"
   (click)="toggleSidenav()">
   <mat-icon>menu</mat-icon>
 </button>
@@ -22,7 +23,6 @@
       <h4>Spending</h4>
       <p>This Month: {{spending[0].thisMonth}}</p>
       <p>Prev Month: {{spending[0].prevMonth}}</p>
-    
     </mat-card-content>
   </mat-card>
   <mat-card *ngIf="utilities" class="summary-card">

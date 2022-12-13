@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SidenavToggleService } from '../services/sidenav-toggle.service';
 
 @Component({
   selector: 'app-topnav',
@@ -9,9 +10,13 @@ export class TopnavComponent implements OnInit {
 
   @Input() deviceXs: boolean;
 
-  constructor() { }
+  constructor(private sidenavToggleService: SidenavToggleService) { }
 
   ngOnInit() {
+  }
+
+  toggleSidenav(){
+    this.sidenavToggleService.toggleSidenav();
   }
 
 }

@@ -29,6 +29,7 @@ import { baseURL } from './shared/baseurl';
 
 import { MatMenuModule, RippleGlobalOptions } from '@angular/material';
 import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
+import { RouterModule } from '@angular/router';
 
 const globalRippleConfig: RippleGlobalOptions = {
   disabled: true,
@@ -61,7 +62,8 @@ const globalRippleConfig: RippleGlobalOptions = {
     HttpModule,
     HttpClientModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule
   ],
   providers: [
     SpendingService,

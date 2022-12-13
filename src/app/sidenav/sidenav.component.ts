@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { SidenavToggleService } from '../services/sidenav-toggle.service';
 
@@ -9,6 +9,7 @@ import { SidenavToggleService } from '../services/sidenav-toggle.service';
 })
 export class SidenavComponent implements OnInit {
 
+  @Input() deviceXs: boolean;
   opened: boolean;
   constructor(private sidenavToggleService: SidenavToggleService) { }
 
