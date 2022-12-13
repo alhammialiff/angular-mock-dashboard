@@ -1,4 +1,3 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MediaChange, MediaService } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';

@@ -1,5 +1,40 @@
 <mat-toolbar class="topnav">
-  <span class="flex-spacer"></span>
-  <a mat-button>Home</a>
-  <a mat-button>My Account</a>
+  <!-- <span class="flex-spacer"></span> -->
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    
+    <div fxLayout="row">
+      <!-- Webpage Icon -->
+      <button mat-button>
+        <mat-icon>assessment</mat-icon>
+        <span class="logo">Mock Dashboard</span>
+      </button>
+      <!-- On non-XS screen, this would appear on screen -->
+      <div *ngIf="!deviceXs" fxLayout="row">
+        <a mat-button>Home</a>
+        <a mat-button>My Account</a>
+      </div>
+    </div>
+
+    <div>   
+      <!-- On XS screen (Mobile), this would appear on screen -->
+      <button *ngIf="deviceXs" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+      <!-- On non-XS screen, this would appear on screen -->
+      <button
+        mat-button
+        *ngIf="!deviceXs"
+        [matMenuTriggerFor]="menu"
+        fxLayoutAlign="end">
+        Menu
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row 
+    *ngIf="deviceXs"
+    fxLayoutAlign="space-between center">
+    <button mat-button>Home</button>
+    <button mat-button>My Account</button>
+  </mat-toolbar-row>
 </mat-toolbar>

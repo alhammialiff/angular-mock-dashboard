@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Utilities } from '../shared/utilities';
 import { UtilitiesService } from '../services/utilities.service';
 import * as d3 from 'd3';
-import { createViewChild } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-utilities-chart',
