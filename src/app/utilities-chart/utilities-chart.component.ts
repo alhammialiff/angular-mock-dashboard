@@ -18,8 +18,8 @@ export class UtilitiesChartComponent implements OnInit {
   public gasSVG;
   public waterSVG;
   private margin = 50;
-  private width = 750 - (this.margin * 2);
-  private height = 400 - (this.margin * 2);
+  private width = 730 - (this.margin * 2);
+  private height = 300 - (this.margin * 2);
 
   // @ViewChild('electricGraph') divElectricityGraph: ElementRef;
   // @ViewChild('gasGraph') divGasGraph: ElementRef;

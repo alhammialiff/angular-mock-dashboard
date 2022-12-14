@@ -1,18 +1,24 @@
-<mat-tab-group animationDuration="0ms" 
-  mat-stretch-tabs="true" 
-  (selectedTabChange)="toggleGraph($event)">
-  <mat-tab label="Electricity">
-    <div #electricGraph id="electricity-usage-graph">
+<mat-card>
+  <mat-card-content>
+    <div fxLayout="row">
+      <mat-tab-group animationDuration="0ms" 
+        mat-stretch-tabs="true" 
+        (selectedTabChange)="toggleGraph($event)">
+        <mat-tab label="Electricity">
+          <div #electricGraph id="electricity-usage-graph">
+          </div>
+        </mat-tab>
+        <mat-tab #gasGraph label="Gas">
+          <div id="gas-usage-graph">
+          </div>
+        </mat-tab>
+        <mat-tab #waterGraph label="Water">
+          <div>
+            <figure id="water-usage-graph">
+            </figure>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
-  </mat-tab>
-  <mat-tab #gasGraph label="Gas">
-    <div id="gas-usage-graph">
-    </div>
-  </mat-tab>
-  <mat-tab #waterGraph label="Water">
-    <div>
-      <figure id="water-usage-graph">
-      </figure>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+  </mat-card-content>
+</mat-card>

@@ -22,6 +22,7 @@ import { UtilitiesChartComponent } from './utilities-chart/utilities-chart.compo
 import { SpendingService } from './services/spending.service';
 import { UtilitiesService } from './services/utilities.service';
 import { SidenavToggleService } from './services/sidenav-toggle.service';
+import { ScreenSizeService } from './services/screen-size.service';
 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -69,6 +70,7 @@ const globalRippleConfig: RippleGlobalOptions = {
     SpendingService,
     SidenavToggleService,
     UtilitiesService,
+    ScreenSizeService,
     { provide: 'BaseURL', useValue: baseURL },
     { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig }
   ],
